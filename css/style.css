@@ -1,0 +1,45 @@
+.social:hover {
+  transform: scale(1.2);
+}
+.social {
+  transition: all 0.25s;
+}
+body {
+  background-color: #e37a0e;
+}
+main, img {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+hr {
+  height: 1px;
+  background-color: black;
+}
+h5 {
+  color: white;
+}
+.figure-caption a, .figure-caption a:visited {
+  color: #e37a0e !important;
+}
+.figure-caption a:hover, .figure-caption a:active {
+  color: gray !important;
+  text-decoration: none;
+}
+.heading, h4 {
+  font-family: 'Spectral SC', serif;
+}
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+.btn:hover{
+  border: 0.5px solid;
+}
+.nav-pills a:link, a:visited {
+  color: white !important;
+}
+.nav-pills a:hover {
+  color: gray !important;
+}
+.nav-pills > a.active, .btn-primary {
+  background-color: #e37a0e !important;
+  border: none;
+}
