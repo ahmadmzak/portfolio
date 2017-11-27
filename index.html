@@ -44,9 +44,38 @@
             <p>
               This is the main content!
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              <br>
+              <!-- Link trigger modal -->
+              <a id="cv-link" href="#" data-toggle="modal" data-target="#cv-modal">
+                View
+              </a>
+              or
+              <a href="https://dl.dropboxusercontent.com/s/0yzirlu1ismo1rm/CV%202017%20v3.pdf?dl=0" download="AhmedZakirCV.pdf">
+                download
+              </a>
+              résumé.
+              <!-- Modal -->
+              <div class="modal fade" id="cv-modal" tabindex="-1" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="modal-title">Résumé</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <img class="img-fluid" src="images/cv.png" alt="Résumé">
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </p>
           </div>
-          <img class="img-fluid rounded" src="images/mypic.jpg" alt="my pic">
+          <img class="img-fluid rounded" src="images/mypic.jpg" alt="Profile Picture">
         </div>
       </div>
       <div class="border pt-4 pr-4 pl-4 pb-5 bg-white" id="portfolio">
@@ -56,36 +85,36 @@
           <figure class="col-md-6 figure">
             <h4>Project 1</h4>
             <img class="figure-img img-fluid rounded" src="https://via.placeholder.com/400x300">
-            <figcaption class="figure-caption"><a href="#">https://ahmadmzak.github.io/project1</a></figcaption>
+            <figcaption class="figure-caption"><a href="#" target="_blank">https://ahmadmzak.github.io/project1</a></figcaption>
           </figure>
           <figure class="col-md-6 figure">
             <h4>Project 2</h4>
             <img class="figure-img img-fluid rounded" src="https://via.placeholder.com/400x300">
-            <figcaption class="figure-caption"><a href="#">https://ahmadmzak.github.io/project2</a></figcaption>
+            <figcaption class="figure-caption"><a href="#" target="_blank">https://ahmadmzak.github.io/project2</a></figcaption>
           </figure>
         </div>
         <div class="row mb-2 text-center">
           <figure class="col-md-6 figure">
             <h4>Project 3</h4>
             <img class="figure-img img-fluid rounded" src="https://via.placeholder.com/400x300">
-            <figcaption class="figure-caption"><a href="#">https://ahmadmzak.github.io/project3</a></figcaption>
+            <figcaption class="figure-caption"><a href="#" target="_blank">https://ahmadmzak.github.io/project3</a></figcaption>
           </figure>
           <figure class="col-md-6 figure">
             <h4>Project 4</h4>
             <img class="figure-img img-fluid rounded" src="https://via.placeholder.com/400x300">
-            <figcaption class="figure-caption"><a href="#">https://ahmadmzak.github.io/project4</a></figcaption>
+            <figcaption class="figure-caption"><a href="#" target="_blank">https://ahmadmzak.github.io/project4</a></figcaption>
           </figure>
         </div>
         <div class="row mb-2 text-center">
           <figure class="col-md-6 figure">
             <h4>Project 5</h4>
             <img class="figure-img img-fluid rounded" src="https://via.placeholder.com/400x300">
-            <figcaption class="figure-caption"><a href="#">https://ahmadmzak.github.io/project5</a></figcaption>
+            <figcaption class="figure-caption"><a href="#" target="_blank">https://ahmadmzak.github.io/project5</a></figcaption>
           </figure>
           <figure class="col-md-6 figure">
             <h4>Project 6</h4>
             <img class="figure-img img-fluid rounded" src="https://via.placeholder.com/400x300">
-            <figcaption class="figure-caption"><a href="#">https://ahmadmzak.github.io/project6</a></figcaption>
+            <figcaption class="figure-caption"><a href="#" target="_blank">https://ahmadmzak.github.io/project6</a></figcaption>
           </figure>
         </div>
       </div>
@@ -131,6 +160,16 @@
       $( document ).ready(function() {
         //Scrollspy offset
         $("body").scrollspy({target: "#navigation", offset:200});
+      });
+      $().ready( function() {
+        $("#cv-modal").css({
+          'margin-top': function () { //vertical centering
+            return -($(this).height()/2)+100;
+          },
+          'margin-left': function () { //Horizontal centering
+            return -($(this).width()/2);
+          }
+        });
       });
     </script>
   </body>

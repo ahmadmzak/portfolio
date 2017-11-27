@@ -17,12 +17,12 @@ hr {
 h5 {
   color: white;
 }
-.figure-caption a, .figure-caption a:visited {
+a, a:visited {
   color: #e37a0e !important;
 }
-.figure-caption a:hover, .figure-caption a:active {
-  color: gray !important;
-  text-decoration: none;
+a:hover, a:active {
+  color: red !important;
+  text-decoration: none !important;
 }
 .heading, h4 {
   font-family: 'Spectral SC', serif;
@@ -31,9 +31,9 @@ h5 {
   font-family: 'Montserrat', sans-serif;
 }
 .btn:hover{
-  border: 0.5px solid;
+  color: gray;
 }
-.nav-pills a:link, a:visited {
+.nav-pills a:link, .nav-pills a:visited {
   color: white !important;
 }
 .nav-pills a:hover {
@@ -42,4 +42,10 @@ h5 {
 .nav-pills > a.active, .btn-primary {
   background-color: #e37a0e !important;
   border: none;
+}
+.modal-content {
+  width: 40vw !important;
+}
+#modal-title {
+  color: black;
 }
