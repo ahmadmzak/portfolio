@@ -17,8 +17,14 @@ hr {
 h5 {
   color: white;
 }
-a, a:visited {
+.figure-caption a, #about a {
+  font-weight: 600;
+}
+a {
   color: #e37a0e !important;
+}
+a:visited {
+  color: #a9a9a9 !important;
 }
 a:hover, a:active {
   color: red !important;
