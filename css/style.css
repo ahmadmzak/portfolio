@@ -20,13 +20,13 @@ h5 {
 .figure-caption a, #about a {
   font-weight: 600;
 }
-a {
+#about a, #portfolio a {
   color: #e37a0e !important;
 }
-a:visited {
+#about a:visited, #portfolio a:visited {
   color: #a9a9a9 !important;
 }
-a:hover, a:active {
+#about a:hover, #about a:active, #portfolio a:hover, #portfolio a:active {
   color: red !important;
   text-decoration: none !important;
 }
