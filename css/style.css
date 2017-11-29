@@ -1,9 +1,6 @@
 .social:hover {
   transform: scale(1.2);
 }
-.social {
-  transition: all 0.25s;
-}
 body {
   background-color: #e37a0e;
 }
@@ -48,10 +45,4 @@ h5 {
 .nav-pills > a.active, .btn-primary {
   background-color: #e37a0e !important;
   border: none;
-}
-.modal-content {
-  width: 40vw !important;
-}
-#modal-title {
-  color: black;
 }
