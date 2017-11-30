@@ -21,7 +21,7 @@
       <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
         <div class="container">
           <a class="navbar-brand" href="#">
-            <img class="mr-2" src="images/logo.png" width="50" height="auto" class="d-inline-block align-center" alt="">
+            <img class="mr-2" src="images/logo.png" width="50" height="auto" class="d-inline-block align-center" alt="logo">
             <span class="heading">Ahmed Zakir</span>
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
@@ -99,21 +99,21 @@
           <form class="col-lg-6">
             <div class="form-group">
               <label for="name">Name</label>
-              <input class="form-control" id="name" type="text" name="" value="">
+              <input class="form-control" id="name" type="text" name="name" value="">
             </div>
             <div class="form-group">
               <label for="email">Email Address</label>
-              <input class="form-control" id="email" type="text" name="" value="">
+              <input class="form-control" id="email" type="text" name="email" value="">
             </div>
             <div class="form-group">
               <label for="phone">Phone Number</label>
-              <input class="form-control" id="phone" type="text" name="" value="">
+              <input class="form-control" id="phone" type="text" name="phone" value="">
             </div>
             <div class="form-group">
               <label for="message">Message</label>
-              <textarea class="form-control" id="message" rows="5"></textarea>
+              <textarea class="form-control" id="message" rows="5" name="message"></textarea>
             </div>
-            <button class="btn btn-primary" type="submit">Send</button>
+            <button class="btn btn-primary form-btn" type="submit">Send</button>
           </form>
           <p class="col-lg-5 mx-auto pt-4">
             Want to get in touch with me? Be it to request more info about myself or my experience, to ask for my resume, or random questions about the universe and the meaning of life... just feel free to drop me a line anytime.
@@ -126,8 +126,8 @@
     <footer class="footer bg-dark pt-4 pb-4">
       <div class="container text-right">
         <h5 class="heading">Around The Web</h5>
-          <a href="https://github.com/ahmadmzak" title="Github" target="_blank"><img class="social nav-item mr-2" src="images/Github.svg" width="50" height="50" alt="social" /></a>
-          <a href="https://www.linkedin.com/in/ahmed-zakir" title="LinkedIn" target="_blank"><img class="social nav-item" src="images/Linkedin.svg" width="50" height="50" alt="social" /></a>
+          <a href="https://github.com/ahmadmzak" title="Github" target="_blank"><img class="social nav-item mr-2 rounded" src="images/Github.svg" width="50" height="50" alt="github" /></a>
+          <a href="https://www.linkedin.com/in/ahmed-zakir" title="LinkedIn" target="_blank"><img class="social nav-item rounded" src="images/Linkedin.svg" width="50" height="50" alt="linkedin" /></a>
       </div>
     </footer>
     <script type="text/javascript">
@@ -135,6 +135,20 @@
         //Scrollspy offset
         $("body").scrollspy({target: "#navigation", offset:200});
       });
+      $('form-btn').on('click', function(e){
+        e.preventDefault();
+        $.ajax({
+          url: 'https://formspree.io/ahmadmzak@gmail.com',
+          method: 'POST',
+          dataType: 'json',
+          data: {
+            name: $('input#name').val(),
+            email: $('input#email').val(),
+            phone: $('input#phone').val(),
+            message: $('input#message').val()
+          }
+        });
+      }
     </script>
   </body>
 </html>

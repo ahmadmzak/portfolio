@@ -46,3 +46,6 @@ h5 {
   background-color: #e37a0e !important;
   border: none;
 }
+.navbar-brand img {
+  background: #161616;
+}
