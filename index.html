@@ -116,7 +116,7 @@
               <label for="message">Message</label>
               <textarea class="form-control" id="message" rows="5" name="message"></textarea>
             </div>
-            <button class="btn btn-primary" id="button" type="submit" name="button">Send</button>
+            <button class="btn btn-primary" id="button" type="submit">Send</button>
           </form>
           <p class="col-lg-5 mx-auto pt-4">
             Want to get in touch with me? Be it to request more info about myself or my experience, to ask for my resume, or random questions about the universe and the meaning of life... just feel free to drop me a line anytime.
@@ -136,22 +136,8 @@
     <script type="text/javascript">
       $( document ).ready(function() {
         //Scrollspy offset
-        $("body").scrollspy({target: "#navigation", offset:200});
+        $("body").scrollspy({target: "#navigation", offset:100}); // prev offset 200
       });
-      /*$('#button').on('click', function(e){
-        e.preventDefault();
-        $.ajax({
-          url: 'https://formspree.io/ahmadmzak@gmail.com',
-          method: 'POST',
-          dataType: 'json',
-          data: {
-            name: $('input#name').val(),
-            email: $('input#email').val(),
-            phone: $('input#phone').val(),
-            message: $('input#message').val()
-          }
-        });
-      }*/
     </script>
   </body>
 </html>
