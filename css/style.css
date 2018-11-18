@@ -20,8 +20,11 @@ h5 {
 #about a, #portfolio a {
   color: #e37a0e !important;
 }
-#about a:visited, #portfolio a:visited {
+#about a:visited {
   color: #a9a9a9 !important;
+}
+#portfolio a:visited {
+  color: white !important;
 }
 #about a:hover, #about a:active, #portfolio a:hover, #portfolio a:active {
   color: red !important;
